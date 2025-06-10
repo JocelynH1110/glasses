@@ -1,12 +1,32 @@
 <footer>
-  <h2>footer</h2>
+  <ul>
+    <li>首頁</li>
+    <li>系列鏡框</li>
+    <li>門市據點</li>
+    <li>部落格</li>
+    <li>常見問題</li>
+  </ul>
+  <div class="icon">
+    <img src="week3-4/ic-social-fb.png" alt="" />
+    <img src="week3-4/ic_social_ig.png" alt="" />
+    <img src="week3-4/ic_social_line.png" alt="" />
+  </div>
 </footer>
 
 <style>
   footer {
-    background: pink;
+    background: var(--header-bg);
+    color: var(--header-fg);
+    width: 100%;
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
   }
-  h2 {
-    color: orange;
+  my-container {
+    display: flex;
+    justify-content: space-between;
+    outline: 2px solid black;
+    align-items: center;
   }
 </style>
