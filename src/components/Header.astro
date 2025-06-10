@@ -1,0 +1,42 @@
+<header>
+  <my-container>
+    <img src="/images/logo-white.png" alt="glassLogo" />
+    <div class="navbar">
+      <ul>
+        <li>系列鏡框</li>
+        <li>門市據點</li>
+        <li>部落格</li>
+        <li>常見問題</li>
+      </ul>
+    </div>
+  </my-container>
+</header>
+
+<style>
+  header {
+    background: var(--header-bg);
+    color: var(--header-fg);
+    width: 100%;
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+  }
+  my-container {
+    display: flex;
+    justify-content: space-between;
+    outline: 2px solid black;
+    align-items: center;
+  }
+  img {
+    width: 5rem;
+    height: auto;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.25rem;
+    gap: 2em;
+  }
+</style>
