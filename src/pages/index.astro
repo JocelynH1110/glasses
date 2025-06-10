@@ -1,7 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { shops } from "../data";
 ---
 
 <Layout title="hello">
-  <h1>Hello123</h1>
+  <my-container>
+    <h1>門市資訊</h1>
+    <div class="grid">
+      {
+        shops.map((shop) => (
+          <article>
+            <div class="img-wrapper">
+              <img src={`${Astro.url}/images/${shop.image}`} alt={shop.name} />
+            </div>
+            <h2>{shop.name}</h2>
+            <p>📞 電話：{shop.phone}</p>
+            <p>🕙 營業時間：{shop.openingTimes}</p>
+            <p>📍 地址：{shop.address}</p>
+          </article>
+        ))
+      }
+    </div>
+  </my-container>
 </Layout>
+
+<style>
+  .grid {
+    overflow: hidden;
+    display: grid;
+    gap: 1.5rem;
+    --columns: 3;
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+  .img-wrapper {
+    aspect-ratio: 416/224;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+</style>

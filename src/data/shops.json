@@ -1,0 +1,37 @@
+[
+  {
+    "image": "store-1.png",
+    "name": "台北中山旗艦店",
+    "phone": "(02)000-1234",
+    "openingTimes": "10:00-21:00",
+    "address": "台北市中山區南京東路25巷2-1號"
+  },
+  {
+    "image": "store-2.png",
+    "name": "台北綠園店",
+    "phone": "(02)000-2345",
+    "openingTimes": "10:00-21:00",
+    "address": "台北市中正區復興南路132-1號"
+  },
+  {
+    "image": "store-3.png",
+    "name": "台中清水旗艦店",
+    "phone": "(02)000-1234",
+    "openingTimes": "10:00-21:00",
+    "address": "台中市清水區經南一路23號8樓"
+  },
+  {
+    "image": "store-4.png",
+    "name": "高雄中正形象店",
+    "phone": "(07)000-2345",
+    "openingTimes": "10:00-21:00",
+    "address": "高雄市苓雅區中正路38號12樓"
+  },
+  {
+    "image": "store-5.png",
+    "name": "高雄夢時代店",
+    "phone": "(07)000-1234",
+    "openingTimes": "10:00-21:00",
+    "address": "高雄市前鎮區中華一路63號6樓"
+  }
+]
