@@ -13,11 +13,12 @@ $font-sans: $font-latin,$font-cjk;
 :root {
   --primary: #aa0601;
   --header-bg: var(--primary);
-  --header-fg: #fbf2f2;
+  --header-fg: var(--beige);
   --header-height: 5rem;
   --footer-bg: var(--primary);
-  --footer-fg: #fbf2f2;
+  --footer-fg: var(--beige);
   --container-width: #{$container-width};
+  --beige: #fbf2f2;
 }
 
 html,

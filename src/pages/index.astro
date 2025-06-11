@@ -6,6 +6,14 @@ import { shops } from "../data";
 <Layout title="hello">
   <my-container>
     <h1>門市資訊</h1>
+
+    <label
+      ><span>選擇地區</span>
+      <select>
+        <option>台北市</option>
+        <option>屏東市</option>
+      </select></label
+    >
     <div class="grid">
       {
         shops.map((shop) => (
@@ -14,34 +22,43 @@ import { shops } from "../data";
               <img src={`${Astro.url}/images/${shop.image}`} alt={shop.name} />
             </div>
             <h2>{shop.name}</h2>
-            <p>📞 電話：{shop.phone}</p>
-            <p>🕙 營業時間：{shop.openingTimes}</p>
-            <p>📍 地址：{shop.address}</p>
+            <main>
+              <p>📞 電話：{shop.phone}</p>
+              <p>🕙 營業時間：{shop.openingTimes}</p>
+              <p>📍 地址：{shop.address}</p>
+            </main>
+            <a href="#">詳細資訊</a>
           </article>
         ))
       }
     </div>
   </my-container>
-</Layout>
 
-<style>
-  .grid {
-    overflow: hidden;
-    display: grid;
-    gap: 1.5rem;
-    --columns: 3;
-    grid-template-columns: repeat(var(--columns), 1fr);
-  }
-  .img-wrapper {
-    aspect-ratio: 416/224;
-    overflow: hidden;
-    position: relative;
-    img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  <style>
+    .grid {
+      overflow: hidden;
+      display: grid;
+      gap: 1.5rem;
+      --columns: 3;
+      grid-template-columns: repeat(var(--columns), 1fr);
     }
-  }
-</style>
+    .img-wrapper {
+      aspect-ratio: 416/224;
+      overflow: hidden;
+      position: relative;
+      img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    a {
+      background: black;
+      color: var(--beige);
+      text-decoration: none;
+      display: flex;
+    }
+  </style></Layout
+>
