@@ -1,32 +1,84 @@
 <footer>
-  <ul>
-    <li>首頁</li>
-    <li>系列鏡框</li>
-    <li>門市據點</li>
-    <li>部落格</li>
-    <li>常見問題</li>
-  </ul>
-  <div class="icon">
-    <img src="week3-4/ic-social-fb.png" alt="" />
-    <img src="week3-4/ic_social_ig.png" alt="" />
-    <img src="week3-4/ic_social_line.png" alt="" />
-  </div>
+  <my-container>
+    <nav class="menu">
+      <ul>
+        <li>首頁</li>
+        <li>系列鏡框</li>
+        <li>門市據點</li>
+        <li>部落格</li>
+        <li>常見問題</li>
+      </ul>
+    </nav>
+    <div class="social">
+      <img src={Astro.url + "images/ic-social-fb.png"} alt="facebook" />
+      <img src={Astro.url + "images/ic_social_ig.png"} alt="instagram" />
+      <img src={Astro.url + "images/ic_social_line.png"} alt="line" />
+    </div>
+    <div class="contact">
+      <img src={Astro.url + "images/ic_phone.svg"} alt="phone" /><p>
+        0800-000-00
+      </p>
+      <img src={Astro.url + "images/ic_mail.svg"} alt="email" /><p>
+        glasses@business.co
+      </p>
+    </div>
+    <p class="copyright">© 2020 Glasses. All rights reserved.</p>
+    <div class="legal">
+      <p>隱私權政策</p>
+      <p>服務條款</p>
+    </div>
+  </my-container>
 </footer>
 
 <style>
   footer {
-    background: var(--header-bg);
-    color: var(--header-fg);
-    width: 100%;
-    height: var(--header-height);
-
-    display: flex;
-    align-items: center;
+    background: var(--footer-bg);
+    color: var(--footer-fg);
+    padding: 3rem 0 2rem;
   }
   my-container {
-    display: flex;
-    justify-content: space-between;
-    outline: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1rem;
+    height: 1.5rem;
+    padding: 0;
+    gap: 3rem;
+  }
+  .contact {
+    font-size: 2.25rem;
+    border-bottom: 1px solid;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    p {
+      margin: 0;
+    }
+  }
+  .menu,
+  .copyright {
+    font-size: 1rem;
+  }
+  .legal,
+  .social {
+    display: flex;
+    justify-self: flex-end;
+  }
+  .social {
+    gap: 2rem;
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .legal {
+    gap: 3rem;
   }
 </style>

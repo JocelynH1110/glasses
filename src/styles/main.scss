@@ -1,4 +1,8 @@
 $container-width: 80rem;
+$font-latin: Roboto, sans-serif;
+$font-cjk:
+  "Noto Sans TC", "PingFang TC", "Hiragino Sans GB W3", "Microsoft Yahei";
+$font-sans: $font-latin,$font-cjk;
 
 *,
 *::before,
@@ -18,8 +22,9 @@ $container-width: 80rem;
 
 html,
 body {
-  margin:0;
+  margin: 0;
   font-size: 100%;
+  font-family:$font-sans;
 }
 
 my-container {
@@ -31,6 +36,6 @@ my-container {
 
   @media screen and (max-width: #{$container-width}) {
     width: 100%;
-    padding-inline: 1.5rem; // 等於<html> font size 16px
+    padding-inline: 1.5rem; // 等於<html> font size 24px
   }
 }
