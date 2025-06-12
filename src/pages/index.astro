@@ -5,7 +5,7 @@ import { shops } from "../data";
 
 <Layout title="hello">
   <my-container>
-    <h1>門市資訊</h1>
+    <h1>門市據點</h1>
 
     <label
       ><span>選擇地區</span>
@@ -21,11 +21,20 @@ import { shops } from "../data";
             <div class="img-wrapper">
               <img src={`${Astro.url}/images/${shop.image}`} alt={shop.name} />
             </div>
-            <h2>{shop.name}</h2>
+            <p class="store">{shop.name}</p>
             <main>
-              <p>📞 電話：{shop.phone}</p>
-              <p>🕙 營業時間：{shop.openingTimes}</p>
-              <p>📍 地址：{shop.address}</p>
+              <img src={Astro.url + "images/ic_call_16dp.svg"} alt="phone" />
+              <p>電話：{shop.phone}</p>
+              <img
+                src={Astro.url + "images/ic_schedule_16dp.svg"}
+                alt="openingTime"
+              />
+              <p>營業時間：{shop.openingTimes}</p>
+              <img
+                src={Astro.url + "images/ic_location_on_16dp.svg"}
+                alt="address"
+              />
+              <p>地址：{shop.address}</p>
             </main>
             <a href="#">詳細資訊</a>
           </article>
@@ -41,6 +50,7 @@ import { shops } from "../data";
       gap: 1.5rem;
       --columns: 3;
       grid-template-columns: repeat(var(--columns), 1fr);
+      margin-bottom: 5rem;
     }
     .img-wrapper {
       aspect-ratio: 416/224;
@@ -54,11 +64,55 @@ import { shops } from "../data";
         object-fit: cover;
       }
     }
+
+    h1 {
+      margin: 6rem 0 0;
+      font-size: 3rem;
+      border-left: 7px solid #9f1213;
+      padding-left: 0.6rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+    select {
+      width: 19rem;
+      height: 2.37rem;
+      border: 1px solid #ced4da;
+      background: #ffffff;
+      font-size: 1.15rem;
+      margin: 2rem 0 2.5rem 1rem;
+      color: #495057;
+    }
+    .store {
+      font-size: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #00000020;
+      margin: 0;
+    }
+    main {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      border: 1px solid #00000020;
+      padding: 1rem 0 1rem 1.5rem;
+      img {
+        width: 1rem;
+        height: 1.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+        margin: 0.5rem;
+      }
+    }
     a {
       background: black;
       color: var(--beige);
       text-decoration: none;
       display: flex;
+      height: 3.68rem;
+      font-size: 1.19rem;
+      justify-content: center;
+      align-items: center;
     }
   </style></Layout
 >
