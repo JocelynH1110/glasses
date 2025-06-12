@@ -5,3 +5,68 @@ interface Props {
 }
 const { shop } = Astro.props;
 ---
+
+<article>
+  <div class="img-wrapper">
+    <img src={`${Astro.url}/images/${shop.image}`} alt={shop.name} />
+  </div>
+  <p class="store">{shop.name}</p>
+  <main>
+    <img src={Astro.url + "/images/ic_call_16dp.svg"} alt="phone" />
+    <p>電話：{shop.phone}</p>
+    <img src={Astro.url + "/images/ic_schedule_16dp.svg"} alt="openingTime" />
+    <p>營業時間：{shop.openingTimes}</p>
+    <img src={Astro.url + "/images/ic_location_on_16dp.svg"} alt="address" />
+    <p>地址：{shop.address}</p>
+  </main>
+  <a href="#">詳細資訊</a>
+</article>
+
+<style>
+  .img-wrapper {
+    aspect-ratio: 416/224;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  article {
+    height: 100%;
+  }
+  .store {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #00000020;
+    margin: 0;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border: 1px solid #00000020;
+    padding: 0.5rem 0 1rem 1.5rem;
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin: 0.5rem 1.5rem 0 0.6rem;
+    }
+  }
+  a {
+    background: black;
+    color: var(--beige);
+    text-decoration: none;
+    display: flex;
+    height: 3.68rem;
+    font-size: 1.19rem;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
