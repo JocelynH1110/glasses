@@ -30,11 +30,13 @@
   </my-container>
 </footer>
 
-<style>
+<style lang="scss">
+  @use "../styles/_vars";
   footer {
     background: var(--footer-bg);
     color: var(--footer-fg);
     padding: 3rem 0 2rem;
+    overflow-x: hidden;
   }
   my-container {
     display: grid;
@@ -84,5 +86,50 @@
   }
   .legal {
     gap: 3rem;
+  }
+
+  @media (max-width: #{vars.$phone-width}) {
+    footer {
+      padding: 1.5rem 0.875rem;
+    }
+    ul {
+      display: none;
+    }
+    .contact {
+      font-size: 1rem;
+      grid-column: 1;
+      grid-row: 1;
+      border: 0;
+      padding-bottom: 1.5rem;
+      gap: 0.68rem;
+      img {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+    }
+    .social {
+      gap: 0.5rem;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: flex-start;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .copyright {
+      grid-column: span 2;
+      border-top: 1px solid;
+      padding-top: 1rem;
+      margin: 0;
+    }
+    .legal {
+      display: grid;
+      gap: 0;
+      justify-self: start;
+      p {
+        margin: 0.5rem 0 0 0;
+      }
+    }
   }
 </style>

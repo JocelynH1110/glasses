@@ -37,13 +37,43 @@
     font-size: 1.25rem;
     gap: 2em;
   }
+
   @media (max-width: #{vars.$phone-width}) {
+    header {
+      height: 100%;
+    }
+    my-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 0;
+    }
+    img {
+      margin: 1rem 0 1rem 1rem;
+    }
+    .navbar {
+      width: 100%;
+    }
     ul {
       list-style: none;
       font-size: 1rem;
+      padding: 0;
+      gap: 0;
+      margin: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
     }
+
     li {
       border: 1px solid var(--header-fg);
+      padding-block: 0.75rem;
+      border-bottom: 0;
+
+      &:nth-child(even) {
+        border-left: 0;
+      }
     }
   }
 </style>
