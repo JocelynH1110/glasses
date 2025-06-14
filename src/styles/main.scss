@@ -1,10 +1,4 @@
-$container-width: 80rem;
-$tablet-width: 48rem;
-$phone-width: 20rem;
-$font-latin: Roboto, sans-serif;
-$font-cjk:
-  "Noto Sans TC", "PingFang TC", "Hiragino Sans GB W3", "Microsoft Yahei";
-$font-sans: $font-latin,$font-cjk;
+@import "./_vars";
 
 *,
 *::before,
@@ -42,8 +36,4 @@ my-container {
     padding-inline: 1.5rem; // 等於<html> font size 24px
   }
 
-  @media (max-width:#{$phone-width}){
-
-    background:yellow;
-  }
 }
