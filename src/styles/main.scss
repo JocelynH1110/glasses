@@ -1,4 +1,4 @@
-@import "./_vars";
+@use "./_vars";
 
 *,
 *::before,
@@ -13,7 +13,7 @@
   --header-height: 5rem;
   --footer-bg: var(--primary);
   --footer-fg: var(--beige);
-  --container-width: #{$container-width};
+  --container-width: #{vars.$container-width};
   --beige: #fbf2f2;
 }
 
@@ -21,7 +21,7 @@ html,
 body {
   margin: 0;
   font-size: 100%;
-  font-family:$font-sans;
+  font-family: vars.$font-sans;
 }
 
 my-container {
@@ -31,7 +31,7 @@ my-container {
   // 左右 margin
   margin-inline: auto;
 
-  @media screen and (max-width: #{$container-width}) {
+  @media screen and (max-width: #{vars.$container-width}) {
     width: 100%;
     padding-inline: 1.5rem; // 等於<html> font size 24px
   }
